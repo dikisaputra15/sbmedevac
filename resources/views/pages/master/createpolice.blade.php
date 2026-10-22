@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label>Province/Honiara Capital Territory</label>
                 <select class="form-control" name="province_id" id="province">
-                        <label>-Choosse Province/Honiara Capital Territory-</label>
+                        <label>-Choosse Province-</label>
                     @foreach($provinces as $prov)
                         <option value="{{$prov->id}}">{{$prov->provinces_region}}</option>
                     @endforeach
