@@ -2926,12 +2926,9 @@ combinedPanelDiv.innerHTML = `
             </select>
             <label>Category:</label>
             ${[
-                'Solomon Islandsn National Police (Polri) HQ',
-                'Provincial Police (Polda)',
-                'Municipality Police (Polres)',
-                'District Police (Polsek)',
-                'Police Mobile Brigade (Brimob)',
-                'Police Bomb Squad (Gegana)'
+                'National Police (HQ)',
+                'Provincial Police',
+                'Police Posts / Sub-Stations',
             ].map(c => `
             <label style="display:block;font-size:13px;margin-bottom:5px;">
                 <input type="checkbox" name="policeCategory" value="${c}">

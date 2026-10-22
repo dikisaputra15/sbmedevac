@@ -29,6 +29,13 @@ class PoliceController extends Controller
 
      public function filter(Request $request)
     {
+        $categoryAliases = [
+            'Solomon Islandsn National Police (Polri) HQ' => 'National Police (HQ)',
+            'Provincial Police (Polda)' => 'Provincial Police',
+            'Municipality Police (Polres)' => 'Police Posts / Sub-Stations',
+            'Police Mobil Brigade (Brimob)' => 'Police Mobile Brigade (Brimob)',
+        ];
+
         $query = Police::query()
                 ->leftJoin('cities', 'police.city_id', '=', 'cities.id')
                 ->leftJoin('provincesregions', 'police.province_id', '=', 'provincesregions.id')
@@ -47,9 +54,15 @@ class PoliceController extends Controller
         });
 
         // 2. Filter by Category (case-insensitive search)
-        $query->when($request->filled('categories'), function ($q) use ($request) {
+        $query->when($request->filled('categories'), function ($q) use ($request, $categoryAliases) {
 
             $categories = (array) $request->input('categories');
+            $categories = array_map(fn ($category) => $categoryAliases[$category] ?? $category, $categories);
+            foreach ($categoryAliases as $storedCategory => $displayCategory) {
+                if (in_array($displayCategory, $categories, true)) {
+                    $categories[] = $storedCategory;
+                }
+            }
 
             $q->where(function ($sub) use ($categories) {
 
@@ -158,12 +171,9 @@ class PoliceController extends Controller
         // Execute the query and return JSON response
         $polices = $query->get();
         $categoryCounts = [
-            'Solomon Islandsn National Police (Polri) HQ' => 0,
-            'Provincial Police (Polda)' => 0,
-            'Municipality Police (Polres)' => 0,
-            'District Police (Polsek)' => 0,
-            'Police Mobile Brigade (Brimob)' => 0,
-            'Police Bomb Squad (Gegana)' => 0,
+            'National Police (HQ)' => 0,
+            'Provincial Police' => 0,
+            'Police Posts / Sub-Stations' => 0,
         ];
 
         foreach ($polices as $police) {
@@ -175,9 +185,7 @@ class PoliceController extends Controller
             $cats = array_map('trim', explode(',', $police->category));
 
             foreach ($cats as $cat) {
-                if ($cat === 'Police Mobil Brigade (Brimob)') {
-                    $cat = 'Police Mobile Brigade (Brimob)';
-                }
+                $cat = $categoryAliases[$cat] ?? $cat;
 
                 if (isset($categoryCounts[$cat])) {
                     $categoryCounts[$cat]++;
