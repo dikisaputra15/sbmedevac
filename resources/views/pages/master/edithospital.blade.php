@@ -29,8 +29,8 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Province</label>
-                <select class="form-control" name="province_id">
+                <label>Province/Honiara Capital Territory</label>
+                <select class="form-control" name="province_id" id="province">
                     <?php
                         foreach ($provinces as $prov) {
 
@@ -51,7 +51,7 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Edit City / Regency</label>
+                <label>Edit Ward</label>
                 <select class="form-control" name="city" id="city">
                     <?php
                         foreach ($cities as $city) {
@@ -88,20 +88,14 @@
             <div class="form-group">
                 <label>Edit Facility Level</label>
                 <select class="form-control" name="facility_level">
-                    <option value="Class A" {{ old('facility_level', $hospital->facility_level ?? '') == 'Class A' ? 'selected' : '' }}>
-                        Class A
+                    <option value="National Hospital" {{ old('facility_level', $hospital->facility_level ?? '') == 'National Hospital' ? 'selected' : '' }}>
+                        National Hospital
                     </option>
-                    <option value="Class B" {{ old('facility_level', $hospital->facility_level ?? '') == 'Class B' ? 'selected' : '' }}>
-                        Class B
+                    <option value="Provincial Hospital" {{ old('facility_level', $hospital->facility_level ?? '') == 'Provincial Hospital' ? 'selected' : '' }}>
+                        Provincial Hospital
                     </option>
-                    <option value="Class C" {{ old('facility_level', $hospital->facility_level ?? '') == 'Class C' ? 'selected' : '' }}>
-                        Class C
-                    </option>
-                    <option value="Class D" {{ old('facility_level', $hospital->facility_level ?? '') == 'Class D' ? 'selected' : '' }}>
-                        Class D
-                    </option>
-                    <option value="Public Health Center (PUSKESMAS)" {{ old('facility_level', $hospital->facility_level ?? '') == 'Public Health Center (PUSKESMAS)' ? 'selected' : '' }}>
-                        Public Health Center (PUSKESMAS)
+                    <option value="Clinic / Health Center" {{ old('facility_level', $hospital->facility_level ?? '') == 'Clinic / Health Center' ? 'selected' : '' }}>
+                        Clinic / Health Center
                     </option>
                 </select>
             </div>
@@ -143,11 +137,9 @@
 
                 @php
                     $icons = [
-                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital-pin-red.png', 'label' => 'Class A'],
-                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png', 'label' => 'Class B'],
-                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png', 'label' => 'Class C'],
-                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png', 'label' => 'Class D'],
-                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-tosca.png', 'label' => 'Public Health Center (PUSKESMAS)'],
+                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-blue.png', 'label' => 'National Hospital'],
+                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png', 'label' => 'Provincial Hospital'],
+                        ['url' => 'https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png', 'label' => 'Clinic / Health Center'],
                     ];
                 @endphp
 
@@ -1030,7 +1022,7 @@
                 type: 'GET',
                 success: function (data) {
                     $('#city').empty();
-                    $('#city').append('<option value="">-- Choosse City/Regency --</option>');
+                    $('#city').append('<option value="">-- Choosse Ward --</option>');
                     $.each(data, function (key, city) {
                         $('#city').append('<option value="' + city.id + '">' + city.city + '</option>');
                     });
@@ -1038,7 +1030,7 @@
             });
         } else {
             $('#city').empty();
-            $('#city').append('<option value="">-- Choosse City/Regency  --</option>');
+            $('#city').append('<option value="">-- Choosse Ward  --</option>');
         }
     });
 </script>

@@ -146,7 +146,7 @@
                         <strong>Address:</strong>
                         {{ $police->location }},
                         {{ $city->city }},
-                        {{ $province->provinces_region }}, Indonesia
+                        {{ $province->provinces_region }}, Solomon Islands
                     </p>
                     <p>
                         <strong>Latitude:</strong> {{ $police->latitude }}

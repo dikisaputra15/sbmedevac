@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title', 'Airports')
-@section('page-title', 'Papua New Guinea Airports')
+@section('page-title', 'Solomon Islands Airports')
 
 @push('styles')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -471,7 +471,7 @@
 <script>
 // === Inisialisasi Peta ===
 const map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -4.245820574165665, lng: 122.16203857061076 },
+    center: { lat: 6.9167, lng: 158.1667 },
     zoom: 5,
     mapTypeId: 'roadmap',
     mapTypeControl: true,
@@ -1000,7 +1000,7 @@ function addAirportMarkers(data) {
             <strong>Address:</strong>
                 ${airport.address || 'N/A'}
                 ${airport.city_name ? ', ' + airport.city_name : ''}
-                ${airport.province_name ? ', ' + airport.province_name : ''}, Indonesia <br>
+                ${airport.province_name ? ', ' + airport.province_name : ''}, Solomon Islands <br>
             <strong>Website:</strong> ${airport.website || 'N/A'} <br>
         `;
 

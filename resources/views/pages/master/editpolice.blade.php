@@ -22,7 +22,7 @@
 
          <div class="col-md-12">
             <div class="form-group">
-                <label>Province</label>
+                <label>Province/Honiara Capital Territory</label>
                 <select class="form-control" name="province_id" id="province">
                     <?php
                         foreach ($provinces as $prov) {
@@ -44,7 +44,7 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label>Edit Regency / City</label>
+                <label>Edit Ward</label>
                 <select class="form-control" name="city" id="city">
                     <?php
                         foreach ($cities as $city) {
@@ -120,37 +120,37 @@
                 <label>Edit Police Classification (Country)</label><br>
 
                 <input type="hidden" name="icon" id="icon" value="{{ $police->icon }}">
-               <div class="form-check form-check-inline police-option {{ $police->category == 'Indonesian National Police (Polri) HQ' ? 'selected' : '' }}">
+               <div class="form-check form-check-inline police-option {{ $police->category == 'National Police (HQ)' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Indonesian National Police (Polri) HQ"
+                        value="National Police (HQ)"
                         data-icon="{{ asset('images/Layer1.png') }}"
-                        {{ $police->category == 'Indonesian National Police (Polri) HQ' ? 'checked' : '' }}>
+                        {{ $police->category == 'National Police (HQ)' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer1.png') }}" width="16">
-                    <label>Indonesian National Police (Polri) HQ</label>
+                    <label>National Police (HQ)</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'Provincial Police (Polda)' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Provincial Police' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Provincial Police (Polda)"
+                        value="Provincial Police"
                         data-icon="{{ asset('images/Layer2.png') }}"
-                        {{ $police->category == 'Provincial Police (Polda)' ? 'checked' : '' }}>
+                        {{ $police->category == 'Provincial Police' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer2.png') }}" width="16">
-                    <label>Provincial Police (Polda)</label>
+                    <label>Provincial Police</label>
                 </div>
 
-                <div class="form-check form-check-inline police-option {{ $police->category == 'Municipality Police (Polres)' ? 'selected' : '' }}">
+                <div class="form-check form-check-inline police-option {{ $police->category == 'Police Posts / Sub-Stations' ? 'selected' : '' }}">
                     <input class="form-check-input category-radio"
                         type="radio"
                         name="category"
-                        value="Municipality Police (Polres)"
+                        value="Police Posts / Sub-Stations"
                         data-icon="{{ asset('images/Layer3.png') }}"
-                        {{ $police->category == 'Municipality Police (Polres)' ? 'checked' : '' }}>
+                        {{ $police->category == 'Police Posts / Sub-Stations' ? 'checked' : '' }}>
                     <img src="{{ asset('images/Layer3.png') }}" width="16">
-                    <label>Municipality Police (Polres)</label>
+                    <label>Police Posts / Sub-Stations</label>
                 </div>
 
                 <div class="form-check form-check-inline police-option {{ $police->category == 'District Police (Polsek)' ? 'selected' : '' }}">
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'GET',
                 success: function (data) {
                     $('#city').empty();
-                    $('#city').append('<option value="">-- Choosse Regency / City --</option>');
+                    $('#city').append('<option value="">-- Choosse Ward --</option>');
                     $.each(data, function (key, city) {
                         $('#city').append('<option value="' + city.id + '">' + city.city + '</option>');
                     });
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         } else {
             $('#city').empty();
-            $('#city').append('<option value="">-- Choosse Regency / City  --</option>');
+            $('#city').append('<option value="">-- Choosse Ward --</option>');
         }
     });
 </script>
