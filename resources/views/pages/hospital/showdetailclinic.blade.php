@@ -294,18 +294,6 @@
             <div class="classification" style="flex-direction: column; width:100%;">
                       <div class="class-header class-medical-classification">Medical Facility Classification</div>
                       <div class="classification">
-                        <!-- Advanced -->
-                        <div class="class-column">
-                          <div class="class-header class-advanced">Advanced</div>
-                          <div class="hospital-list">
-                            <div class="hospital-item">
-                              <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level66Modal">
-                                <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital-pin-red.png" style="width:24px; height:24px;">
-                                <small>Class A</small>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
 
                         <!-- Intermediate -->
                         <div class="class-column">
@@ -315,13 +303,7 @@
                               <div class="hospital-item">
                                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level55Modal">
                                   <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:24px; height:24px;">
-                                  <small>Class B</small>
-                                </button>
-                              </div>
-                              <div class="hospital-item">
-                                <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level44Modal">
-                                  <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-purple.png" style="width:24px; height:24px;">
-                                  <small>Class C</small>
+                                  <small>National Hospital</small>
                                 </button>
                               </div>
                             </div>
@@ -335,14 +317,14 @@
                             <div class="hospital-row">
                               <div class="hospital-item">
                                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level33Modal">
-                                  <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:24px; height:24px;">
-                                  <small>Class D</small>
+                                  <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-purple.png" style="width:24px; height:24px;">
+                                  <small>Provincial Hospital</small>
                                 </button>
                               </div>
                               <div class="hospital-item">
                                 <button class="btn p-1" data-bs-toggle="modal" data-bs-target="#level11Modal">
-                                    <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:24px; height:24px;">
-                                    <small>PUSKESMAS</small>
+                                    <img src="https://id.concordreview.com/wp-content/plugins/w2gm/resources/images/map_icons/icons/_new/hospital_pin-green.png" style="width:24px; height:24px;">
+                                    <small>Clinic / Health Centre</small>
                                 </button>
                               </div>
                             </div>
@@ -509,122 +491,7 @@
 </div>
 
 <!-- PUSKESMAS -->
-<div class="modal fade" id="level11Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-         <div class="d-flex align-items-center">
-            <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-tosca.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Public Health Center (PUSKESMAS)</h5>
-         </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">A Public Health Center (Pusat Kesehatan Masyarakat / Puskesmas) is a government-operated primary healthcare facility regulated by the Ministry of Health of the Republic of Solomon Islands (Kementerian Kesehatan Republik Solomon Islands), commonly referred to in English as the Solomon Islandsn Ministry of Health (MOH), under national health service regulations. Puskesmas function as a first-level healthcare provider (Fasilitas Kesehatan Tingkat Pertama / FKTP) within Solomon Islands’s health system and BPJS Kesehatan referral framework, it operates at the sub-district (kecamatan) level and serves as the backbone of community-based healthcare delivery. Puskesmas provides comprehensive primary care services, including promotive, preventive, curative, and rehabilitative care focusing on maternal and child health, immunization, and public health programs for the defined population it serves.</p>
-
-        <p class="p-modal text-justify">
-            Most Puskesmas are automatically BPJS-contracted as government facilities. Private clinics acting as FKTP must formally contract with BPJS to serve insured patients. BPJS participants generally must first access care at FKTP before being referred to a hospital, except in emergencies.
-        </p>
-
-        <p class="p-modal text-justify">
-            <b>Note:</b> BPJS (Badan Penyelenggara Jaminan Sosial), Social Security Administering Body. In Solomon Islands, BPJS refers to the public agencies that administer the national social security system under the National Social Security System (SJSN). There are two main bodies:
-            <ul>
-                <li>BPJS Kesehatan – Administers national health insurance (JKN).</li>
-                <li>BPJS Ketenagakerjaan – Administers employment-related social security (work injury, old-age savings, pension, death benefits).</li>
-            </ul>
-            <a href="{{ asset('files/moh-regulation-no3-2020.pdf') }}" target="_blank">Solomon Islands Ministry of Health (MOH) regulation (Permenkes No. 3 Tahun 2020)</a>
-        </p>
-
-        <p class="p-modal text-justify">
-            <strong>Bed Capacity</strong>
-            <ul>
-                <li>
-                    <strong>Non-Inpatient Puskesmas (Rawat Jalan)</strong>
-                    <ul>
-                        <li>No inpatient beds</li>
-                        <li>Focused on outpatient and preventive services</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Inpatient Puskesmas (Rawat Inap)</strong>
-                    <ul>
-                        <li>Typically 5–10 short-stay beds</li>
-                        <li>Designed for basic observation, uncomplicated deliveries, and short-term stabilization</li>
-                        <li>Bed capacity is limited and not comparable to hospital inpatient facilities</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-
-        <p class="p-modal text-justify">
-            <strong>Clinical Services</strong>
-            <ul>
-                <li>
-                    <strong>Primary Medical Services</strong>
-                    <ul>
-                        <li>General practitioner consultations</li>
-                        <li>Basic diagnosis and treatment of common illnesses</li>
-                        <li>Maternal and child health services</li>
-                        <li>Immunization services</li>
-                        <li>Family planning services</li>
-                        <li>Basic dental services</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Public Health & Preventive Services</strong>
-                    <ul>
-                        <li>Disease surveillance and outbreak response</li>
-                        <li>Health promotion and education programs</li>
-                        <li>Community nutrition programs</li>
-                        <li>Environmental health services</li>
-                        <li>School health programs (UKS)</li>
-                        <li>Posyandu supervision</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Emergency & Stabilization Services</strong>
-                    <ul>
-                        <li>Basic emergency care</li>
-                        <li>Initial trauma stabilization</li>
-                        <li>Basic life support</li>
-                        <li>Referral coordination to hospitals (Class D/C/B/A)</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Diagnostic & Support Services</strong>
-                    <ul>
-                        <li>Basic laboratory testing</li>
-                        <li>Basic pharmacy services</li>
-                        <li>Basic medical procedures (wound care, minor procedures)</li>
-                        <li>Antenatal and postnatal care services</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Outreach & Community Services</strong>
-                    <ul>
-                        <li>Mobile health services (Puskesmas Keliling)</li>
-                        <li>Home visits</li>
-                        <li>Integrated community health programs</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-
-        <p class="p-modal text-justify">
-            <strong>Public Health Center (PUSKESMAS) Role</strong>
-            <ul>
-                <li>First-level entry point into Solomon Islands’s healthcare system</li>
-                <li>Primary gatekeeper in the BPJS referral system</li>
-                <li>Community health program implementation center</li>
-                <li>Preventive and promotive health service hub</li>
-                <li>Early detection and disease surveillance center</li>
-                <li>Referral coordinator to higher-level hospitals</li>
-            </ul>
-        </P>
-      </div>
-    </div>
-  </div>
-</div>
+@include('components.classification.clinic-health-centre')
 
 <div class="modal fade" id="level22Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -644,100 +511,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="level33Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-         <div class="d-flex align-items-center">
-            <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-green.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Class D — Sub-district Hospital</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            A Class D Hospital (Rumah Sakit Kelas D), regulated by the Ministry of Health of the Republic of Solomon Islands (Kementerian Kesehatan Republik Solomon Islands), commonly referred to in English as the Solomon Islandsn Ministry of Health (MOH). Class D hospitals provide basic inpatient, outpatient, and emergency services with general practitioners and limited specialist support, including basic medical and surgical capability.
-        </p>
-        <p class="p-modal text-justify">
-            Class D hospitals operate mainly at the sub-district level, it serves as an entry-level facility within the referral system, managing uncomplicated cases, stabilizing emergency patients, and referring more complex conditions to higher-level hospitals. This classification applies to both public and private institutions that meet the established minimum infrastructure, staffing, and service standards.
-        </p>
-        <p class="p-modal text-justify">
-            Public Class D hospitals commonly contract with BPJS. Private Class D hospitals may choose whether to participate. In the referral system, they receive patients from Puskesmas or other first-level facilities if contracted.
-        </p>
-        <p class="p-modal text-justify">
-            Only hospitals that have formal cooperation agreements with BPJS Kesehatan can receive BPJS-referred patients.
-        </p>
-        <p class="p-modal text-justify">
-            <b>Note:</b> BPJS (Badan Penyelenggara Jaminan Sosial), Social Security Administering Body. In Solomon Islands, BPJS refers to the public agencies that administer the national social security system under the National Social Security System (SJSN). There are two main bodies:
-            <ul>
-                <li>BPJS Kesehatan – Administers national health insurance (JKN).</li>
-                <li>BPJS Ketenagakerjaan – Administers employment-related social security (work injury, old-age savings, pension, death benefits).</li>
-            </ul>
-            <a href="{{ asset('files/moh-regulation-no3-2020.pdf') }}" target="_blank">Solomon Islands Ministry of Health (MOH) regulation (Permenkes No. 3 Tahun 2020)</a>
-        </p>
-        <p class="p-modal text-justify">
-            <p><strong>Bed Capacity</strong></p>
-            Minimum 50 inpatient beds (Most Class D hospitals operate between 50–100 beds)
-        </p>
-        <p class="p-modal text-justify">
-            <p><strong>Clinical Services</strong></p>
-             <ul>
-                <li>
-                    <strong>Core Medical Services</strong>
-                    <ul>
-                        <li>At least 2 basic specialist services (typically Internal Medicine and Surgery, or adjusted based on regional need)</li>
-                        <li>General practitioner-led services</li>
-                        <li>Basic maternal and child health services</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Emergency & Critical Care</strong>
-                    <ul>
-                        <li>24/7 Emergency Unit (basic capability)</li>
-                        <li>Initial stabilization of trauma and acute cases</li>
-                        <li>Referral coordination to Class C/B hospitals</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Diagnostic Services</strong>
-                    <ul>
-                        <li>Basic laboratory</li>
-                        <li>Basic radiology / X-ray (limited)</li>
-                        <li>Standard ultrasound (if available)</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Surgical & Therapeutic Facilities</strong>
-                    <ul>
-                        <li>Minor surgical procedures</li>
-                        <li>Basic obstetric procedures</li>
-                        <li>Wound care and emergency interventions</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Supporting Medical Infrastructure</strong>
-                    <ul>
-                        <li>Pharmacy</li>
-                        <li>Basic sterilization services</li>
-                        <li>Medical records system</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-        <p class="p-modal text-justify">
-            <strong>Class D Hospital Role</strong>
-            <ul>
-                <li>First-level hospital within the referral system</li>
-                <li>Bridging facility between primary care (Puskesmas/clinics) and higher-level hospitals</li>
-                <li>Basic inpatient and emergency care provider</li>
-                <li>Stabilization and referral coordination center</li>
-                <li>Healthcare access expansion tool in remote or newly developed areas</li>
-            </ul>
-        </P>
-      </div>
-    </div>
-  </div>
-</div>
+@include('components.classification.provincial-hospital')
 
 <div class="modal fade" id="level44Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
@@ -838,109 +612,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="level55Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="d-flex align-items-center">
-            <img src="https://pg.concordreview.com/wp-content/uploads/2025/01/hospital_pin-blue.png" style="width:30px; height:30px;">
-            <h5 class="modal-title" id="disclaimerLabel">Class B — Provincial Referral Hospital</h5>
-        </div>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="p-modal text-justify">
-            Secondary–tertiary level referral hospital regulated by the Ministry of Health of the Republic of Solomon Islands (Kementerian Kesehatan Republik Solomon Islands), commonly referred to in English as the Solomon Islandsn Ministry of Health (MOH). Class B hospitals provide comprehensive specialist medical services and selected subspecialist services, supported by advanced diagnostic and therapeutic facilities.
-        </p>
-        <p class="p-modal text-justify">
-           Class B hospitals function as provincial or inter-district referral centers, managing moderate to complex medical and surgical cases referred from lower-level hospitals (Class C and D), while referring highly complex subspecialty cases to Class A hospitals. This classification applies equally to public and private hospitals that meet the required standards of infrastructure, human resources, equipment, and service capability.
-        </p>
-        <p class="p-modal text-justify">
-           Public Class B hospitals typically contract with BPJS. Private Class B hospitals may selectively contract or operate fully private services. BPJS patients are accepted only in contracted facilities and generally arrive through referrals from Class C or D hospitals.
-        </p>
-        <p class="p-modal text-justify">
-           Only hospitals that have formal cooperation agreements with BPJS Kesehatan can receive BPJS-referred patients.
-        </p>
-        <p class="p-modal text-justify">
-           <b>Note:</b> BPJS (Badan Penyelenggara Jaminan Sosial), Social Security Administering Body. In Solomon Islands, BPJS refers to the public agencies that administer the national social security system under the National Social Security System (SJSN). There are two main bodies:
-            <ul>
-                <li>BPJS Kesehatan – Administers national health insurance (JKN).</li>
-                <li>BPJS Ketenagakerjaan – Administers employment-related social security (work injury, old-age savings, pension, death benefits).</li>
-            </ul>
-            <a href="{{ asset('files/moh-regulation-no3-2020.pdf') }}" target="_blank">Solomon Islands Ministry of Health (MOH) regulation (Permenkes No. 3 Tahun 2020)</a>
-        </p>
-        <p class="p-modal text-justify">
-            <p><strong>Bed Capacity</strong></p>
-            Minimum 200 inpatient beds. Most Class B hospitals operate between 200–400+ beds, depending on regional demand and provincial role.
-        </p>
-        <p class="p-modal text-justify">
-            <p><strong>Clinical Services</strong></p>
-             <ul>
-                <li>
-                    <strong>Core Medical Services</strong>
-                    <ul>
-                        <li>4 basic specialists: Internal Medicine, Surgery, Pediatrics, Obstetrics & Gynecology</li>
-                        <li>Additional major specialties (e.g., Anesthesiology, Radiology, Pathology, Neurology, Psychiatry, Dermatology, ENT, Ophthalmology)</li>
-                        <li>Selected subspecialty services (e.g., cardiology, orthopedics, urology, pulmonology — depending on hospital capability)</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Emergency & Critical Care</strong>
-                    <ul>
-                        <li>24/7 Emergency Department (IGD)</li>
-                        <li>ICU</li>
-                        <li>NICU and/or PICU (depending on capacity)</li>
-                        <li>HCU (High Care Unit)</li>
-                        <li>Trauma stabilization capability</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Diagnostic Services</strong>
-                    <ul>
-                        <li>CT Scan (standard in most Class B hospitals)</li>
-                        <li>Advanced ultrasound</li>
-                        <li>Comprehensive laboratory services</li>
-                        <li>Blood bank/transfusion unit</li>
-                        <li>Endoscopy services</li>
-                        <li>Basic interventional procedures</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Surgical & Therapeutic Facilities</strong>
-                    <ul>
-                        <li>Multiple operating theatres</li>
-                        <li>Major general surgery capability</li>
-                        <li>Orthopedic and obstetric surgery capability</li>
-                        <li>Dialysis unit (in most provincial hospitals)</li>
-                        <li>Chemotherapy (in hospitals with oncology service)</li>
-                    </ul>
-                </li>
-                <li class="mt-2">
-                    <strong>Supporting Medical Infrastructure</strong>
-                    <ul>
-                        <li>24-hour pharmacy</li>
-                        <li>Central Sterile Supply Department (CSSD)</li>
-                        <li>Medical rehabilitation service</li>
-                        <li>Nutrition & dietetics service</li>
-                        <li>Medical records system</li>
-                    </ul>
-                </li>
-            </ul>
-        </p>
-        <p class="p-modal text-justify">
-            <strong>Class B Hospital Role</strong>
-            <ul>
-                <li>Provincial-level referral hospital</li>
-                <li>Secondary escalation point in the BPJS referral system (from Class C/D)</li>
-                <li>Regional center for specialist services</li>
-                <li>Stabilization and management center for moderate to complex cases</li>
-                <li>Supporting teaching hospital (in many provinces)</li>
-            </ul>
-        </P>
-      </div>
-    </div>
-  </div>
-</div>
+@include('components.classification.national-hospital')
 
 <div class="modal fade" id="level66Modal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width:800px;">
@@ -1057,10 +729,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const medicalFacilityModals = [
-        { id: 'level11Modal', prefix: 'puskesmas', role: 'PUSKESMAS Role' },
-        { id: 'level33Modal', prefix: 'class-d', role: 'Class D Hospital Role' },
+        { id: 'level11Modal', prefix: 'clinic-health-centre', role: 'Clinic / Health Centre Role' },
+        { id: 'level33Modal', prefix: 'provincial-hospital', role: 'Provincial Hospital Role' },
         { id: 'level44Modal', prefix: 'class-c', role: 'Class C Hospital Role' },
-        { id: 'level55Modal', prefix: 'class-b', role: 'Class B Hospital Role' },
+        { id: 'level55Modal', prefix: 'national-hospital', role: 'National Hospital Role' },
         { id: 'level66Modal', prefix: 'class-a', role: 'Class A Hospital Role' }
     ];
 
@@ -1082,7 +754,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         Array.from(body.childNodes).forEach(function (node) {
             const heading = (node.textContent || '').trim().replace(/\s+/g, ' ');
-            if (/^Bed Capacity\b/i.test(heading)) currentSection = 'services';
+            const section = node.dataset?.modalSection;
+            if (section) currentSection = section;
+            else if (/^Bed Capacity\b/i.test(heading)) currentSection = 'services';
             else if (/^Clinical Services\b/i.test(heading)) currentSection = 'services';
             else if (/^(?:Class [A-D] Hospital|Public Health Center \(PUSKESMAS\)) Role\b/i.test(heading)) currentSection = 'role';
             sections[currentSection].appendChild(node);
