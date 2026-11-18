@@ -718,12 +718,6 @@
                 </div>
             </div>
 
-             <div class="card">
-                <div class="card-header fw-bold"> Nearest Police Station</div>
-                <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                    <?php echo $hospital->nearest_police_station; ?>
-                </div>
-            </div>
         </div>
 
     </div>
